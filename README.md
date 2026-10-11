@@ -1,31 +1,48 @@
-# LearnWise × Kraftshala — Story-led learning website
+# LearnWise × Kraftshala — Story-led Meta Ads learning website
 
-A responsive, browser-first Meta Ads learning experience. The project is website-only; there is no mobile-app project and no local development requirement.
+A responsive, browser-first learning experience with recurring animated characters Maya (mentor) and Pixel (mascot). The project is website-only; source and deployments are managed through GitHub.
 
-## Current build: first interactive vertical slice
+## Current build
 
-- Premium responsive landing page with animated original SVG characters (Maya the mentor and Pixel the mascot)
-- Story intro and mission framing before teaching begins
-- A teaching-first Impressions lesson with an interactive ad-view slider and live impression/reach counters
-- Friendly practice question shown after the lesson, with positive feedback, a hint, a retry-friendly tone, and no guilt-based scoring
-- Explanation scene that connects impressions and reach
-- A second teaching scene introducing Reach
-- Motion toggle, reduced-motion support, responsive layouts, keyboard-focus styling, and accessible status feedback
+- Story-style landing and mission briefing
+- Twelve study chapters with character dialogue, concise teaching material, key takeaways, examples, and interactive mini-simulations:
+  - Impressions
+  - Reach
+  - Frequency
+  - Clicks (all)
+  - Link Clicks
+  - Unique Clicks (all)
+  - Landing Page Views
+  - Conversions
+  - CTR
+  - Conversion Rate (CVR)
+  - CPM
+  - CPC and CPA
+- Character-led learning before the assessment
+- Eight-step campaign journey activity with placement feedback
+- Knowledge check with answer selection, positive/encouraging feedback, character reactions, hints, explanations and answer retention
+- Score report computed from the learner's actual responses, with strong areas and areas to revisit
+- Motion toggle, reduced-motion support, responsive layout and keyboard-focus styling
 
-## Brand
+## Design
 
 - Navy: `#243E60`
 - Yellow: `#F1AE13`
+- Original inline SVG character illustrations and speech bubbles
+- No external image assets or runtime framework required for the current static build
 
 ## Cloud deployment
 
-The GitHub Actions workflow in `.github/workflows/deploy.yml` publishes `index.html` to GitHub Pages on pushes to `main`.
+GitHub Actions publishes `index.html` to GitHub Pages when commits land on `main`.
 
 - Repository: https://github.com/Himanshu615/learnwise-kraftshala
 - Live site: https://himanshu615.github.io/learnwise-kraftshala/
+- Deployment workflow: https://github.com/Himanshu615/learnwise-kraftshala/actions
 
-All changes can be committed through GitHub and built/deployed in the cloud; no local Node.js installation is required for this static vertical slice.
+All changes can be committed through GitHub. No local Node.js install is required.
 
-## Next implementation phase
+## Source-content note
 
-The complete MVP still needs the remaining source-PDF lessons and explanations, all 11 assessment questions, the draggable eight-step journey, and the final report calculated from the learner's actual answers. The supplied `MVP_LearnWise_Kraftshala.pdf` remains the source of truth for exact content and specified interactions. The current character illustrations are original inline SVG artwork, and the current learning flow is an initial vertical slice—not the finished course.
+The source PDF calls for 11 scored questions while its screen sequence separately shows 12 metric question screens/concepts (Impressions, Reach, Frequency, Clicks all, Link Clicks, Unique Clicks all, Landing Page Views, Conversions, CTR, CVR, CPM, and CPC/CPA). This implementation currently teaches all 12 concepts and assesses each concept separately, so the score is calculated out of 12. Please validate whether you prefer the source's stated 11-question total or one scored comparison question combining two related metrics.
+
+The eight-step user journey follows the source order: Impressions → Reach → Frequency → Clicks (all) → Unique Clicks (all) → Link Clicks → Landing Page Views → Conversions.
